@@ -18,6 +18,7 @@ FROM ubuntu:18.04
 RUN apt-get update && apt-get install -y \
     mysql-client \
     mysql-utilities \
+    curl \
  && rm -rf /var/lib/apt/lists/*
 
 COPY --from=downloader /tmp/migrate.linux-amd64 /usr/bin/migrate
